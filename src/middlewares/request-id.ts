@@ -1,3 +1,3 @@
-import { requestId } from "hono/request-id";
+import { requestId } from 'hono/request-id'
 
-export default requestId();
+export default requestId()

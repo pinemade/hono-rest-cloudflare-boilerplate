@@ -1,4 +1,4 @@
-#:schema node_modules/wrangler/config-schema.json
+# :schema node_modules/wrangler/config-schema.json
 name = "hono-cloudflare-boilerplate"
 main = "src/index.ts"
 compatibility_date = "2024-10-22"

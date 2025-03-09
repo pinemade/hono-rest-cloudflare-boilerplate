@@ -1,7 +1,7 @@
-import { productRoute, userRoute } from "@/src/handlers";
-import { env, oaconfig } from "@/src/configs";
-import { requestIDMiddleware, scalarMiddleware } from "@/src/middlewares";
-import { App } from "@/src/utils";
+import { env, oaconfig } from '@/src/configs'
+import { productRoute, userRoute } from '@/src/handlers'
+import { requestIDMiddleware, scalarMiddleware } from '@/src/middlewares'
+import { App } from '@/src/utils'
 
 const app = new App()
 
@@ -19,7 +19,7 @@ const app = new App()
   /**
    * global api routes
    */
-  .route("/users", userRoute)
-  .route("/products", productRoute);
+  .route('/users', userRoute)
+  .route('/products', productRoute)
 
-export default app;
+export default app

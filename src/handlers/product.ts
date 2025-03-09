@@ -1,18 +1,18 @@
-import { LIST_PRODUCT_SCHEMA } from "@/src/handlers/product.schema";
-import { App } from "@/src/utils";
+import { LIST_PRODUCT_SCHEMA } from '@/src/handlers/product.schema'
+import { App } from '@/src/utils'
 
 export default new App()
 
-  .openapi(LIST_PRODUCT_SCHEMA, function (c) {
-    c.req.query("is_expired");
+  .openapi(LIST_PRODUCT_SCHEMA, (c) => {
+    c.req.query('is_expired')
     return c.json(
       [
         {
-          name: "person name",
+          name: 'person name',
           is_expired: false,
         },
       ],
-      200
-    );
+      200,
+    )
   })
-  .get("/");
+  .get('/')

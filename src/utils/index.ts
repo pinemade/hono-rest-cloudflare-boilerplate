@@ -1,3 +1,3 @@
-import { OpenAPIHono } from "@hono/zod-openapi";
+import { OpenAPIHono } from '@hono/zod-openapi'
 
-export const App = OpenAPIHono<{ Bindings: CloudflareBindings }>;
+export const App = OpenAPIHono<{ Bindings: CloudflareBindings }>
