@@ -1,7 +1,7 @@
 import { LIST_PRODUCT_SCHEMA } from "@/src/handlers/product.schema";
-import { OpenAPIHono } from "@hono/zod-openapi";
+import { App } from "@/src/utils";
 
-export default new OpenAPIHono<{ Bindings: CloudflareBindings }>()
+export default new App()
 
   .openapi(LIST_PRODUCT_SCHEMA, function (c) {
     c.req.query("is_expired");

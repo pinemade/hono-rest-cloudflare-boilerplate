@@ -4,6 +4,6 @@ import { env } from "@/src/configs";
 export default apiReference({
   layout: "modern",
   spec: {
-    url: env.API_DOC_PATH,
+    url: env.API_DOCS_JSON_PATH,
   },
 });

@@ -1,7 +1,7 @@
 import { LIST_USER_SCHEMA } from "@/src/handlers/user.schema";
-import { OpenAPIHono } from "@hono/zod-openapi";
+import { App } from "@/src/utils";
 
-export default new OpenAPIHono<{ Bindings: CloudflareBindings }>()
+export default new App()
 
   .openapi(LIST_USER_SCHEMA, function (c) {
     return c.json(

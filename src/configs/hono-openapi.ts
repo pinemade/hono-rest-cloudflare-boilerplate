@@ -11,5 +11,5 @@ export default {
   {
     Bindings: CloudflareBindings;
   },
-  "/docs"
+  string
 >;

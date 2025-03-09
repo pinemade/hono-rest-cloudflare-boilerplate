@@ -1,20 +1,20 @@
-import { OpenAPIHono } from "@hono/zod-openapi";
 import { productRoute, userRoute } from "@/src/handlers";
-import { env, honoOAConfig } from "@/src/configs";
+import { env, oaconfig } from "@/src/configs";
 import { requestIDMiddleware, scalarMiddleware } from "@/src/middlewares";
+import { App } from "@/src/utils";
 
-const app = new OpenAPIHono<{ Bindings: CloudflareBindings }>()
+const app = new App()
 
   /**
    * openapi doc
    */
-  .doc(env.API_DOC_PATH, honoOAConfig)
+  .doc(env.API_DOCS_JSON_PATH, oaconfig)
 
   /**
    * global middlewares
    */
   .use(requestIDMiddleware)
-  .use(env.API_REFERENCE_PATH, scalarMiddleware)
+  .use(env.API_DOCS_PATH, scalarMiddleware)
 
   /**
    * global api routes
